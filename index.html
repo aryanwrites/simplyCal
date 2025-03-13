@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <div class="header-item" id="calendarBtn">Find in calendar</div>
+            <div class="header-item" id="yesterdayBtn">Yesterday's calories</div>
+            <div class="header-item" id="todayBtn">Today's calories</div>
+        </div>
+
+        <div class="goal-section">
+            <div class="goal-title">GOAL:</div>
+            <div class="goal-value" id="calorieGoal">2400 CAL</div>
+        </div>
+
+        <div class="clearfix">
+            <div class="meals-section">
+                <div class="meals-title">TODAY'S MEALS:</div>
+                <div id="mealsList">
+                    <!-- Meals will be inserted here from JavaScript -->
+                </div>
+                
+                <div class="frequent-items">
+                    <div class="frequent-title">Frequently Added Items:</div>
+                    <div class="frequent-list" id="frequentItemsList">
+                        <!-- Frequent items will be inserted here from JavaScript -->
+                    </div>
+                </div>
+                
+                <button class="add-meal-btn" id="addMealBtn">+Add meal</button>
+            </div>
+
+            <div class="stats-container">
+                <div class="total-section">
+                    <div class="total-title">total till now</div>
+                    <div class="total-value" id="totalCalories">0</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                    </div>
+                </div>
+                
+                <div class="protein-section">
+                    <div class="protein-title">Protein Intake</div>
+                    <div class="protein-value" id="totalProtein">0g</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill protein-progress-fill" id="proteinProgressFill" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Meal Modal -->
+    <div class="modal" id="addMealModal">
+        <div class="modal-content">
+            <div class="modal-title">Add New Meal</div>
+            <div class="form-group">
+                <label for="mealName">Meal Name:</label>
+                <input type="text" id="mealName" placeholder="e.g., Roti, Rajma">
+            </div>
+            <div class="form-group">
+                <label for="mealQuantity">Quantity:</label>
+                <input type="number" id="mealQuantity" placeholder="e.g., 2">
+            </div>
+            <div class="form-group">
+                <label for="mealCalories">Calories per unit:</label>
+                <input type="number" id="mealCalories" placeholder="e.g., 120">
+            </div>
+            <div class="form-group">
+                <label for="mealProtein">Protein per unit (g):</label>
+                <input type="number" id="mealProtein" placeholder="e.g., 5">
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-cancel" id="cancelBtn">Cancel</button>
+                <button class="btn btn-save" id="saveMealBtn">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Frequent Item Modal -->
+    <div class="modal" id="frequentItemModal">
+        <div class="modal-content frequent-item-modal">
+            <div class="modal-title">Add <span id="frequentItemName">Item</span></div>
+            <div class="form-group">
+                <label for="frequentItemQuantity">Quantity:</label>
+                <input type="number" id="frequentItemQuantity" value="1">
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-cancel" id="cancelFrequentBtn">Cancel</button>
+                <button class="btn btn-save" id="saveFrequentBtn">Add</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

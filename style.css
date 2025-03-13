@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.app-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.header-item {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.header-item:hover {
+    background-color: #f0f0f0;
+}
+
+.goal-section {
+    width: 250px;
+    padding: 15px;
+    border: 2px solid #333;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.goal-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.goal-value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.meals-section {
+    float: left;
+    width: 60%;
+    padding: 15px;
+    border: 2px solid #333;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.meals-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.meal-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.add-meal-btn {
+    display: block;
+    width: 150px;
+    margin: 15px auto 0;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add-meal-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.stats-container {
+    float: right;
+    width: 35%;
+}
+
+.total-section {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #333;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.protein-section {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #333;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.total-title, .protein-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.total-value, .protein-value {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.protein-progress-fill {
+    height: 100%;
+    background-color: #2196F3;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 400px;
+    max-width: 90%;
+}
+
+.modal-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-cancel {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-save {
+    background-color: #4caf50;
+    color: white;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.frequent-items {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.frequent-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.frequent-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.frequent-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: all 0.2s;
+}
+
+.frequent-item:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.frequent-item-name {
+    font-weight: bold;
+}
+
+.frequent-item-cals {
+    font-size: 12px;
+    color: #666;
+}
+
+.frequent-item-modal {
+    text-align: center;
+}
+
+.frequent-item-modal img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .meals-section, .stats-container {
+        float: none;
+        width: 100%;
+    }
+}
